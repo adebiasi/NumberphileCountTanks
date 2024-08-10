@@ -48,7 +48,7 @@ function setup() {
     descLabel = createDiv('');
     descLabel.position(150, 20);
     descLabel.style('font-size', '18px');
-    descLabel.html("What is the best way to estimate the number of tanks? Simply taking the max tank id or performing the formula m+m/k+1?<br>The number of tanks to find is randomly generated in a range between "+minPossibleTanks+" and "+maxPossibleTanks+" each simulation. ");
+    descLabel.html("What is the best way to estimate the number of tanks? Simply taking the max tank id or performing the formula m+m/k-1?<br>The number of tanks to find is randomly generated in a range between "+minPossibleTanks+" and "+maxPossibleTanks+" each simulation. ");
 
 
     resetButton = createButton('Reset');
@@ -82,7 +82,7 @@ function draw() {
         simulate();
         numSimulationsLeft--;
         loop();
-        resultLabel.html("Simulation with m+m/k+1 closer to the real # of tanks: " + numEstimatedValueWins + "<br>Simulation with last tank id closer to the real # of tanks: " + numLastTankIdWin);
+        resultLabel.html("# Simulation with m+m/k+1 closer to the real # of tanks: " + numEstimatedValueWins + "<br># Simulation with last tank id closer to the real # of tanks: " + numLastTankIdWin);
 
     } else {
         noLoop();
