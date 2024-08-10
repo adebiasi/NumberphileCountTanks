@@ -82,7 +82,7 @@ function draw() {
         simulate();
         numSimulationsLeft--;
         loop();
-        resultLabel.html("# Simulation with m+m/k+1 closer to the real # of tanks: " + numEstimatedValueWins + "<br># Simulation with last tank id closer to the real # of tanks: " + numLastTankIdWin);
+        resultLabel.html("# Simulation with m+m/k-1 closer to the real # of tanks: " + numEstimatedValueWins + "<br># Simulation with last tank id closer to the real # of tanks: " + numLastTankIdWin);
 
     } else {
         noLoop();
