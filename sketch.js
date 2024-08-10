@@ -171,7 +171,7 @@ function step() {
 }
 
 function estimateNumTanks() {
-    return floor(maxTankId + (maxTankId / foundTanks.length) + 1);
+    return floor(maxTankId + (maxTankId / foundTanks.length) - 1);
 }
 
 function checkResult() {
